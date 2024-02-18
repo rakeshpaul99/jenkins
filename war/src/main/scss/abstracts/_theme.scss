@@ -88,6 +88,7 @@ $semantics: (
 
   // Breadcrumbs bar
   --breadcrumbs-bar-background: hsla(240, 20%, 96.5%, 0.8);
+  --breadcrumbs-bar-color: var(--black);
 
   // Alert call outs
   --alert-success-text-color: #155724;
@@ -245,6 +246,7 @@ $semantics: (
   --side-panel-hover-color: var(--panel-border-color);
   --task-link-bg-color--active: var(--panel-border-color);
   --task-link-bg-color--hover: var(--very-light-grey);
+  --panel-text-color: var(--black);
 
   // Form
   --section-padding: 1.75rem;
@@ -355,20 +357,20 @@ $semantics: (
 
   // Header
   --brand-link-color: var(--secondary);
-  --header-link-color: var(--black);
+  --header-link-color: var(--white);
   --header-link-color-active: #0a0a0a;
   --header-search-border: var(--black);
   --search-input-color: var(--brand-link-color);
   --search-bg: var(--black);
   --search-box-completion-bg: var(--primary-hover);
   --search-box-shadow: 0 1px 7px 0 rgba(255, 255, 255, 0.7);
-  --header-bg-classic: #fff;
-  --header-link-bg-classic-hover: #404040;
-  --header-link-bg-classic-active: #404040;
-  --header-item-border-radius: 4px;
+  --header-bg-classic: #000;
+  --header-link-bg-classic-hover: #bfbfbf;
+  --header-link-bg-classic-active: #bfbfbf;
 
   // Breadcrumbs bar
-  --breadcrumbs-bar-background: hsla(240, 20%, 96.5%, 0.8);
+  --breadcrumbs-bar-background: hsla(15, 80%, 3.5%, 0.2);
+  --breadcrumbs-bar-color: var(--white);
 
   // Alert call outs
   --alert-success-text-color: #155724;
@@ -392,8 +394,6 @@ $semantics: (
   --table-header-foreground: var(--text-color);
   --table-body-background: var(--background);
   --table-body-foreground: var(--text-color);
-  --table-border-radius: 10px;
-  --table-row-border-radius: 4px;
 
   // Link
   --link-color: var(--accent-color);
@@ -407,16 +407,16 @@ $semantics: (
 
   // Tooltips
   --tooltip-backdrop-filter: contrast(0.6) brightness(2.4) saturate(2)
-  blur(15px);
+    blur(15px);
   --tooltip-color: var(--text-color);
   --tooltip-box-shadow: 0 0 8px 2px rgba(0, 0, 30, 0.05),
-  0 0 1px 1px rgba(0, 0, 20, 0.025), 0 10px 20px rgba(0, 0, 20, 0.15);
+    0 0 1px 1px rgba(0, 0, 20, 0.025), 0 10px 20px rgba(0, 0, 20, 0.15);
 
   // Dropdowns
   --dropdown-backdrop-filter: contrast(0.6) brightness(2.5) saturate(1.5)
-  blur(20px);
+    blur(20px);
   --dropdown-box-shadow: 0 10px 30px rgba(0, 0, 20, 0.2),
-  0 2px 10px rgba(0, 0, 20, 0.05), inset 0 -1px 2px rgba(255, 255, 255, 0.025);
+    0 2px 10px rgba(0, 0, 20, 0.05), inset 0 -1px 2px rgba(255, 255, 255, 0.025);
 
   // Dialogs
   ::backdrop {
@@ -425,8 +425,8 @@ $semantics: (
 
   --dialog-backdrop-filter: brightness(3) blur(50px);
   --dialog-box-shadow: 0 10px 40px rgba(0, 0, 20, 0.15),
-  0 2px 15px rgba(0, 0, 20, 0.05),
-  inset 0 0 2px 2px rgba(255, 255, 255, 0.025);
+    0 2px 15px rgba(0, 0, 20, 0.05),
+    inset 0 0 2px 2px rgba(255, 255, 255, 0.025);
 
   // Dark link
   --link-dark-color: var(--text-color);
@@ -471,15 +471,14 @@ $semantics: (
   --tabs-border-radius: calc((10px + 34px) / 2);
 
   // Side panel
-  --panel-header-bg-color: var(--light-grey);
-  --panel-border-color: var(--light-grey);
-  --side-panel-hover-color: var(--panel-border-color);
-  --task-link-bg-color--active: var(--panel-border-color);
-  --task-link-bg-color--hover: var(--very-light-grey);
+  --panel-header-bg-color: var(--dark-grey);
+  --panel-border-color: var(--dark-grey);
+  --task-link-bg-color--hover: var(--dark-grey);
+  --panel-text-color: var(--white);
 
   // Form
   --section-padding: 1.75rem;
-  --input-color: var(--white);
+  --input-color: var(--black);
   --input-border: #c3ccd1;
   --input-border-hover: #5c7889;
   --input-hidden-password-bg-color: #f9f9f9;

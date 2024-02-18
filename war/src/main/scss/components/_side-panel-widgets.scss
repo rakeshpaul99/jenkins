@@ -1,8 +1,11 @@
 @use "../abstracts/mixins";
 
 #side-panel .pane-frame {
+  --text-color: var(--panel-text-color);
+
   border-radius: 1rem;
   background: var(--card-background);
+  color: var(--text-color);
   border: var(--card-border-width) solid var(--card-border-color);
   margin-left: 10px;
   margin-bottom: calc(var(--section-padding) / 2);
