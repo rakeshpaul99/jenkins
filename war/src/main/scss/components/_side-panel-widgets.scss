@@ -1,10 +1,11 @@
 @use "../abstracts/mixins";
 
 #side-panel .pane-frame {
-  --text-color: var(--panel-text-color);
-
   border-radius: 1rem;
   background: var(--card-background);
+
+  --text-color: var(--panel-text-color);
+
   color: var(--text-color);
   border: var(--card-border-width) solid var(--card-border-color);
   margin-left: 10px;
@@ -15,20 +16,35 @@
 #side-panel .pane-header {
   font-size: var(--font-size-sm);
   display: flex;
+
+  --text-color: var(--panel-text-color);
+
+  color: var(--text-color);
 }
 
 #side-panel .pane-footer {
   font-size: var(--font-size-xs);
+
+  --text-color: var(--panel-text-color);
+
+  color: var(--text-color);
 }
 
 #side-panel .pane-header,
 #side-panel .pane-footer {
+  --text-color: var(--panel-text-color);
+  --link-dark-color: var(--text-color);
+
   color: var(--link-dark-color);
   background: transparent;
   padding: 0.65rem 1rem;
 }
 
 #side-panel .pane-header-title {
+  --text-color: var(--panel-text-color);
+  --link-dark-color: var(--text-color);
+
+  color: var(--link-dark-color);
   display: inline-block;
   flex: 1;
   font-weight: 500;
@@ -57,6 +73,9 @@
 }
 
 #side-panel .pane-content .pane {
+  --text-color: var(--panel-text-color);
+
+  color: var(--text-color);
   font-size: var(--font-size-xs);
   padding: 0.5rem 0.25rem;
 
@@ -91,6 +110,9 @@
  * Executors
  */
 #executors th.pane {
+  --text-color: var(--panel-text-color);
+
+  color: var(--text-color);
   text-align: left;
 }
 
@@ -186,6 +208,10 @@
   padding: 0 2px; /* Sync changes with func expandControlsTo50Percent in hudson-behavior.js */
   display: inline-block;
   overflow: hidden;
+
+  --text-color: var(--panel-text-color);
+
+  color: var(--text-color);
 }
 
 .build-row.multi-line .build-row-cell .block {

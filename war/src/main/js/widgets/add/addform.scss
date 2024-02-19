@@ -6,7 +6,7 @@
     position: relative;
     border: 1px solid var(--input-border);
     border-bottom: none;
-    background: var(--light-grey);
+    background: var(--add-form-background-color);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     z-index: 5;
@@ -16,7 +16,7 @@
     position: relative;
     border: 1px solid var(--input-border);
     border-top: none;
-    background: var(--light-grey);
+    background: var(--add-form-background-color);
     height: 110px;
 
     .btn-decorator {
@@ -54,7 +54,7 @@
     border: 1px solid var(--input-border);
     border-top: none;
     padding: 20px;
-    background-color: var(--light-grey);
+    background-color: var(--add-form-background-color);
 
     p.description {
       font-size: var(--font-size-base);
