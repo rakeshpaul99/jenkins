@@ -98,7 +98,7 @@
     }
 
     .input-validation-message {
-      color: red;
+      color: var(--red);
       padding-top: 2px;
       font-weight: bold;
     }
@@ -214,7 +214,7 @@
 
   .categories {
     border: 1px solid var(--input-border);
-    background-color: var(--very-light-grey);
+    background-color: var(--add-form-categories-background-color);
 
     .category {
       border-bottom: 1px solid var(--input-border);

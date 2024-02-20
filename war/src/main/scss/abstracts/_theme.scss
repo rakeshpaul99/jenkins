@@ -194,6 +194,7 @@ $semantics: (
 
   // Dark link
   --link-dark-color: var(--text-color);
+  --link-dark-visited-color: var(--link-dark-color);
   --link-dark-color--hover: var(--primary-hover);
   --link-dark-color--active: var(--primary-active);
   --link-dark-text-decoration: none;
@@ -257,6 +258,7 @@ $semantics: (
 
   //Add Form
   --add-form-background-color: var(--light-grey);
+  --add-form-categories-background-color: var(--very-light-grey);
 
   /* stylelint-disable-next-line media-query-no-invalid */
   @media screen and (max-width: breakpoints.$tablet-breakpoint) {
@@ -430,6 +432,7 @@ $semantics: (
 
   //Add Form
   --add-form-background-color: var(--medium-grey);
+  --add-form-categories-background-color: var(--dark-grey);
 
   // Deprecated - Add form widget / configure job
   --light-bg-color--hover: rgba(0, 0, 0, 0.35);
@@ -460,6 +463,10 @@ $semantics: (
   // Colors
   @each $key, $value in $colors {
     --#{$key}: #{$value};
+
+    @if $key == "white" {
+      --white: #ebebe0;
+    }
 
     @if $key != "black" and $key != "white" {
       --light-#{$key}: #{lighten($value, 20%)};

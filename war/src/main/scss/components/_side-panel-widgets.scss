@@ -3,7 +3,6 @@
 #side-panel .pane-frame {
   border-radius: 1rem;
   background: var(--card-background);
-  color: var(--text-color);
   border: var(--card-border-width) solid var(--card-border-color);
   margin-left: 10px;
   margin-bottom: calc(var(--section-padding) / 2);
@@ -13,11 +12,10 @@
 #side-panel .pane-header {
   font-size: var(--font-size-sm);
   display: flex;
-  color: var(--text-color);
 }
 
 #side-panel .pane-footer {
-  color: var(--text-color);
+  font-size: var(--font-size-xs);
 }
 
 #side-panel .pane-header,
@@ -28,9 +26,6 @@
 }
 
 #side-panel .pane-header-title {
-  --link-dark-color: var(--text-color);
-
-  color: var(--link-dark-color);
   display: inline-block;
   flex: 1;
   font-weight: 500;
@@ -59,7 +54,6 @@
 }
 
 #side-panel .pane-content .pane {
-  color: var(--text-color);
   font-size: var(--font-size-xs);
   padding: 0.5rem 0.25rem;
 
@@ -94,7 +88,6 @@
  * Executors
  */
 #executors th.pane {
-  color: var(--text-color);
   text-align: left;
 }
 
@@ -190,7 +183,6 @@
   padding: 0 2px; /* Sync changes with func expandControlsTo50Percent in hudson-behavior.js */
   display: inline-block;
   overflow: hidden;
-  color: var(--text-color);
 }
 
 .build-row.multi-line .build-row-cell .block {

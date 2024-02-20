@@ -46,7 +46,6 @@
   margin-top: 0;
   margin-bottom: 0.5rem;
   padding-inline: 0 0;
-  color: var(--text-color-secondary);
 }
 
 .jenkins-form-description {
@@ -61,7 +60,6 @@
   position: relative;
   display: flex;
   line-height: 38px;
-  color: var(--text-color-secondary);
 
   &::before {
     content: "";
