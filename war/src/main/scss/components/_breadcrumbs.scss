@@ -11,8 +11,6 @@
   overflow-x: auto;
   background: var(--breadcrumbs-bar-background);
 
-  --text-color: var(--breadcrumbs-bar-color);
-
   &__list {
     display: contents;
     list-style-type: none;

@@ -1,7 +1,6 @@
 @use "../abstracts/mixins";
 
 .jenkins-table {
-  --text-color: var(--table-body-foreground-text);
   --table-padding: 0.55rem;
 
   width: 100%;
@@ -67,7 +66,6 @@
       color: var(--table-body-foreground);
 
       & > td {
-        color: var(--table-body-foreground);
         background: var(--table-body-background);
         vertical-align: middle;
         padding: var(--table-padding) 0 var(--table-padding) 1.6rem;

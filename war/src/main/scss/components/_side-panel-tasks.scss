@@ -10,8 +10,6 @@ $background-outset: 0.7rem;
   margin: var(--section-padding);
   gap: 5px;
 
-  --text-color: var(--panel-text-color);
-
   /* stylelint-disable-next-line media-query-no-invalid */
   @media (min-width: breakpoints.$tablet-breakpoint) {
     margin-right: calc($background-outset);
@@ -48,8 +46,6 @@ $background-outset: 0.7rem;
       padding-left: 2.8rem;
     }
   }
-
-  --text-color: var(--panel-text-color);
 }
 
 #side-panel .jenkins-search__results-container--visible .task-link {
