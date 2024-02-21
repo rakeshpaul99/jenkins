@@ -27,7 +27,7 @@ $semantics: (
 );
 
 :root,
-.app-theme-picker__picker[data-theme="none"] {
+.app-theme-picker__picker {
   // Font related properties
   --font-family-sans: system-ui, "Segoe UI", roboto, "Noto Sans", oxygen, ubuntu,
     cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", arial, sans-serif,
@@ -256,6 +256,10 @@ $semantics: (
   --form-item-max-width--medium: min(50vw, 1400px);
   --form-item-max-width--small: min(35vw, 1200px);
 
+  //Add Form
+  --add-form-background-color: var(--light-grey);
+  --add-form-categories-background-color: var(--very-light-grey);
+
   /* stylelint-disable-next-line media-query-no-invalid */
   @media screen and (max-width: breakpoints.$tablet-breakpoint) {
     --section-padding: 1.25rem;
@@ -330,5 +334,155 @@ $semantics: (
 
   @each $key, $value in $semantics {
     --#{$key}-color: #{$value};
+  }
+}
+
+:root,
+.app-theme-picker__picker[data-theme="dark"] {
+  // branding
+  --secondary: hsl(15, 90%, 50%);
+  --focus-input-border: #f9c09e;
+  --focus-input-glow: #{color.change(#f4955d, $alpha: 0.75)};
+
+  // State colors
+  --primary-hover: #fa782b;
+  --primary-active: #f6a97c;
+  --danger-hover: #14c7c4;
+  --danger-active: #4afffc;
+
+  // Status icon colors
+  --unstable-build-icon-color: var(--dark-orange);
+
+  // Background colors
+  --background: var(--black);
+
+  // Header
+  --brand-link-color: var(--secondary);
+  --header-link-color: var(--white);
+  --header-link-color-active: #0a0a0a;
+  --header-search-border: var(--black);
+  --search-bg: var(--black);
+  --search-box-completion-bg: var(--primary-hover);
+  --search-box-shadow: 0 1px 7px 0 rgba(255, 255, 255, 0.7);
+  --header-bg-classic: #000;
+  --header-link-bg-classic-hover: #bfbfbf;
+  --header-link-bg-classic-active: #bfbfbf;
+
+  // Breadcrumbs bar
+  --breadcrumbs-bar-background: hsla(15, 80%, 3.5%, 0.2);
+
+  // Tooltips
+  --tooltip-backdrop-filter: contrast(0.6) brightness(2.4) saturate(2)
+    blur(15px);
+  --tooltip-color: var(--text-color);
+  --tooltip-box-shadow: 0 0 8px 2px rgba(0, 0, 30, 0.05),
+    0 0 1px 1px rgba(0, 0, 20, 0.025), 0 10px 20px rgba(0, 0, 20, 0.15);
+
+  // Dropdowns
+  --dropdown-backdrop-filter: contrast(0.6) brightness(2.5) saturate(1.5)
+    blur(20px);
+  --dropdown-box-shadow: 0 10px 30px rgba(0, 0, 20, 0.2),
+    0 2px 10px rgba(0, 0, 20, 0.05), inset 0 -1px 2px rgba(255, 255, 255, 0.025);
+
+  // Dialogs
+  ::backdrop {
+    --dialog-backdrop-background: hsla(240, 10%, 20%, 0.8);
+  }
+
+  --dialog-box-shadow: 0 10px 40px rgba(0, 0, 20, 0.15),
+    0 2px 15px rgba(0, 0, 20, 0.05),
+    inset 0 0 2px 2px rgba(255, 255, 255, 0.025);
+
+  // Dark link
+  --link-dark-color: var(--text-color);
+  --link-dark-color--hover: var(--primary-hover);
+  --link-dark-color--active: var(--primary-active);
+
+  // Pane
+  --pane-header-bg: var(--medium-grey);
+  --pane-header-border-color: var(--medium-grey);
+  --pane-border-color: var(--medium-grey);
+  --pane-link-color: white;
+  --pane-link-color--visited: white;
+
+  // Cards
+  --card-border-color: hsla(15, 75%, 25%, 0.75);
+  --card-border-color--hover: hsla(15, 75%, 25%, 0.5);
+  --card-border-color--active: hsla(15, 75%, 25%, 0.25);
+
+  // Tab bar
+  --tabs-item-background--hover: rgba(255, 255, 255, 0.95);
+  --tabs-item-background--active: rgba(255, 255, 255, 0.9);
+  --tabs-item-background--selected: black;
+
+  // Side panel
+  --panel-header-bg-color: var(--medium-grey);
+  --panel-border-color: var(--medium-grey);
+  --task-link-bg-color--hover: var(--dark-grey);
+
+  // Form
+  --input-color: var(--black);
+  --input-border: #c3ccd1;
+  --input-border-hover: #5c7889;
+  --input-hidden-password-bg-color: #f9f9f9;
+  --form-input-glow: 0 0 0 10px transparent;
+  --form-input-glow--focus: 0 0 0 5px var(--focus-input-glow);
+  --pre-background: rgba(255, 255, 255, 0.95);
+  --selection-color: rgba(253, 179, 73, 0.7);
+
+  //Add Form
+  --add-form-background-color: var(--medium-grey);
+  --add-form-categories-background-color: var(--dark-grey);
+
+  // Deprecated - Add form widget / configure job
+  --light-bg-color--hover: rgba(0, 0, 0, 0.35);
+  --add-item-btn-decorator-border-color: #534;
+  --add-item-btn-decorator-bg-color: rgba(10, 6, 16, 0.25);
+
+  // Plugin manager
+  --plugin-manager-bg-color-already-upgraded: var(--medium-grey);
+  --plugin-manager-category-link-bg-color: var(--dark-grey);
+  --plugin-manager-category-link-bg-color--hover: #0d0d0d;
+  --plugin-manager-category-link-border-color: var(--light-grey);
+  --plugin-manager-category-link-border-color--hover: var(--white);
+
+  // Auto complete
+  --auto-complete-bg-color--prehighlight: #4c2b00;
+
+  // Default button
+  --button-background: hsla(15, 75%, 25%, 0.9);
+  --button-background--hover: hsla(15, 75%, 25%, 0.825);
+  --button-background--active: hsla(15, 75%, 25%, 0.75);
+  --button-box-shadow--focus: hsla(15, 75%, 25%, 0.9);
+
+  // Variables for sidebar items, card items
+  --item-background--hover: hsla(15, 75%, 25%, 0.85);
+  --item-background--active: hsla(15, 75%, 25%, 0.775);
+  --item-box-shadow--focus: hsla(15, 75%, 25%, 0.895);
+
+  // Colors
+  @each $key, $value in $colors {
+    --#{$key}: #{$value};
+
+    @if $key == "white" {
+      --white: #ebebe0;
+    }
+
+    @if $key != "black" and $key != "white" {
+      --light-#{$key}: #{lighten($value, 20%)};
+      --dark-#{$key}: #{darken($value, 20%)};
+    }
+  }
+
+  @each $key, $value in $semantics {
+    --#{$key}-color: #{$value};
+
+    @if $value == "var(--black)" {
+      --#{$key}-color: var(--white);
+    }
+
+    @if $value == "var(--white)" {
+      --#{$key}-color: var(--black);
+    }
   }
 }
