@@ -17,6 +17,14 @@
             </a>
         </div>
 
+        <div class="toggle-theme">
+            <a class="toggle-theme__link" href="${rootURL}/toggleCurrentTheme" tooltip="Click to toggle theme of webpage">
+                <img src="${imagesURL}/svgs/theme-toggle-${h.getCurrentTheme()}.svg"
+                     alt="Toggle Theme icon"
+                     class="toggle-theme__image" />
+            </a>
+        </div>
+
         <div class="searchbox hidden-xs">
             <!-- search box -->
             <j:set var="searchURL" value="${h.searchURL}"/>

@@ -619,6 +619,10 @@ public class Functions {
         return iconSize;
     }
 
+    public static String getCurrentTheme() throws SecurityException {
+        return getCookie(Stapler.getCurrentRequest(), "dataTheme", "light");
+    }
+
     /**
      * Gets the suffix to use for YUI JavaScript.
      */

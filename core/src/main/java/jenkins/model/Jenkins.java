@@ -4399,6 +4399,21 @@ public class Jenkins extends AbstractCIBase implements DirectlyModifiableTopLeve
     }
 
     /**
+     * Changes the theme for UI.
+     *  light -> dark (& vice-versa).
+     */
+    public void doToggleCurrentTheme(StaplerRequest req, StaplerResponse rsp) throws IOException {
+        Cookie cookie = new Cookie("dataTheme", Functions.getCurrentTheme().equals("light") ? "dark" : "light");
+        cookie.setMaxAge(9999999);
+        cookie.setSecure(req.isSecure());
+        cookie.setHttpOnly(true);
+        rsp.addCookie(cookie);
+        String ref = req.getHeader("Referer");
+        if (ref == null) ref = ".";
+        rsp.sendRedirect2(ref);
+    }
+
+    /**
      * Logs out the user.
      */
     public void doLogout(StaplerRequest req, StaplerResponse rsp) throws IOException, ServletException {
